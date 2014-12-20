@@ -1,0 +1,17 @@
+/* Have the function DashInsert(str) insert dashes ('-') between each two odd numbers in 
+str. For example: if str is 454793 the output should be 4547-9-3. Don't count zero as an 
+odd number. */
+
+function DashInsert(num) {
+  var array = num.toString().split("");
+  var newArray = [];
+  for (var i=0; i<array.length; i++){
+    if(parseFloat(array[i])%2=== 1 && parseFloat(array[i+1])%2===1){
+        newArray.push(array[i]);
+        newArray.push("-")
+    }else{
+        newArray.push(array[i])
+    }
+  }
+  return (newArray.join(""));
+}
