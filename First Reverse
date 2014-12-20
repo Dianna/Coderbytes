@@ -1,0 +1,12 @@
+//I've included a second method commented out
+
+function FirstReverse(str) {
+  var newString=[];
+  var x = str.split("");
+  for(var i = 0; i<x.length; i++){
+     newString.unshift(x[i]);
+  }
+  return newString.join(""); 
+}
+
+/* str = str.split("").reverse().join(""); */
