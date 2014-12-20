@@ -1,0 +1,18 @@
+/* Have the function SwapCase(str) take the str parameter and swap the case of each 
+character. For example: if str is "Hello World" the output should be hELLO wORLD. Let 
+numbers and symbols stay the way they are. */
+
+function SwapCase(str) {
+    var y = "";
+    for (var i= 0; i<str.length; i++){
+        if ((/[a-z]/).test(str.charAt(i))){
+            y = y+str.charAt(i).toUpperCase();
+        }
+        else if((/[A-Z]/).test(str.charAt(i))){
+            y = y+str.charAt(i).toLowerCase();
+        }else if(!(/[A-Za-z]/).test(str.charAt(i))){
+            y = y+(str.charAt(i));
+        }
+    }
+    return y;
+}
